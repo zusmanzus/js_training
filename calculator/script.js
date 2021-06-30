@@ -44,11 +44,23 @@ calculatorButtons.addEventListener('click', function(e) {
     }
     
   } else if (buttonValue === '.') {
+    let number;
+    
     if (operation.length > 0) {
-      secondNumber += buttonValue;
+      number = secondNumber;
     }
     else {
+      number = firstNumber;
+    }
+    
+    if (number.length === 0 || number.match(/\./)) {
+      return
+    } else {
+      if (operation.length > 0) {
+        secondNumber += buttonValue;
+      } else {
         firstNumber += buttonValue;
+      }
     }
   }
   
