@@ -44,14 +44,8 @@ calculatorButtons.addEventListener('click', function(e) {
     }
     
   } else if (buttonValue === '.') {
-    let number;
+    const number = operation.length > 0 ? secondNumber : firstNumber;
     
-    if (operation.length > 0) {
-      number = secondNumber;
-    }
-    else {
-      number = firstNumber;
-    }
     
     if (number.length === 0 || number.match(/\./)) {
       return
@@ -64,6 +58,5 @@ calculatorButtons.addEventListener('click', function(e) {
     }
   }
   
-
   calculatorInput.textContent = `${firstNumber} ${operation} ${secondNumber}`;
 });
