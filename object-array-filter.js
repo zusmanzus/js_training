@@ -1,5 +1,5 @@
-function filterByAttribute(nameList, attrName, attrValue) {
-    for (i = 0; i < nameList.length; i++) {
+function filter(nameList, attrName, attrValue) {
+    for (let i = 0; i < nameList.length; i++) {
         if (nameList[i][attrName] === attrValue) {
             let newNameArray = nameList[i];
             return newNameArray;
@@ -13,6 +13,6 @@ let objects = [
     { name: 'Пётр', surname: 'Петров' }
     ];
 
-let result = filterByAttribute(objects, 'name', 'Иван');
+let result = filter(objects, 'name', 'Иван');
 
-export default {filterByAttribute}
+export default {filter}
