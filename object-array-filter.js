@@ -4,7 +4,7 @@ let objects = [
     { name: 'Пётр', surname: 'Петров' }
     ];
 
-function anotherFilter(arr, name, name1) {
+function filter(arr, name, name1) {
   for (let key in arr) {
     if (arr[key][name].includes(name1)) {
       let arr1 = [];
@@ -14,6 +14,6 @@ function anotherFilter(arr, name, name1) {
   }
 }
 
-const result = anotherFilter(objects, 'name', 'Иван');
+const result = filter(objects, 'name', 'Иван');
 
-export default anotherFilter
+export default filter
