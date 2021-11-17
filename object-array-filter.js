@@ -1,18 +1,19 @@
-function filter(nameList, attrName, attrValue) {
-    for (let i = 0; i < nameList.length; i++) {
-        if (nameList[i][attrName] === attrValue) {
-            let newNameArray = nameList[i];
-            return newNameArray;
-        }
-    }
- }
-
 let objects = [
     { name: 'Василий', surname: 'Васильев' },
     { name: 'Иван', surname: 'Иванов' },
     { name: 'Пётр', surname: 'Петров' }
     ];
 
-let result = filter(objects, 'name', 'Иван');
+function anotherFilter(arr, name, name1) {
+  for (let key in arr) {
+    if (arr[key][name].includes(name1)) {
+      let arr1 = [];
+      arr1.push(arr[key]);
+      return arr1;
+    }
+  }
+}
 
-export default {filter}
+const result = anotherFilter(objects, 'name', 'Иван');
+
+export default anotherFilter
